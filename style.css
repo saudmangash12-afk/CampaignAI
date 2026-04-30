@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b1220;
+  color: white;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #0f172a;
+  padding: 20px;
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+input, select {
+  padding: 10px;
+  margin: 5px;
+}
+
+.platforms {
+  margin: 10px 0;
+}
+
+.platforms label {
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  background: #111827;
+  padding: 15px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+}

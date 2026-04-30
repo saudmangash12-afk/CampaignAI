@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campaign AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <h2>Campaign AI</h2>
+    <p>Marketing Intelligence Dashboard</p>
+  </aside>
+
+  <main class="main">
+
+    <h1>Campaign Analysis</h1>
+
+    <div class="controls">
+
+      <input id="budget" type="number" placeholder="Budget ($)">
+
+      <select id="age">
+        <option value="">Age Group</option>
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-44">35-44</option>
+      </select>
+
+      <select id="type">
+        <option value="">Campaign Type</option>
+        <option value="awareness">Awareness</option>
+        <option value="traffic">Traffic</option>
+        <option value="leads">Leads</option>
+        <option value="sales">Sales</option>
+      </select>
+
+      <div class="platforms">
+        <label><input type="checkbox" value="tiktok"> TikTok</label>
+        <label><input type="checkbox" value="instagram"> Instagram</label>
+        <label><input type="checkbox" value="snapchat"> Snapchat</label>
+        <label><input type="checkbox" value="facebook"> Facebook</label>
+        <label><input type="checkbox" value="linkedin"> LinkedIn</label>
+      </div>
+
+      <button onclick="run()">Run Analysis</button>
+      <button onclick="exportToExcel()">Export Excel</button>
+
+    </div>
+
+    <!-- KPI -->
+    <div class="grid">
+
+      <div class="card"><h3>CTR</h3><p id="ctr">--</p></div>
+      <div class="card"><h3>Engagement</h3><p id="eng">--</p></div>
+      <div class="card"><h3>Leads</h3><p id="leads">--</p></div>
+      <div class="card"><h3>Conversions</h3><p id="conv">--</p></div>
+      <div class="card"><h3>ROI</h3><p id="roi">--</p></div>
+
+    </div>
+
+    <h2 id="best"></h2>
+
+    <canvas id="chart"></canvas>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
